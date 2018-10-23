@@ -1,0 +1,396 @@
+eu:
+  activemodel:
+    attributes:
+      participatory_process:
+        announcement: Anuntzio
+        banner_image: Bannerra
+        copy_categories: Kopiatu kategoriak
+        copy_components: Kopiatu osagaiak
+        copy_steps: Kopiatu faseak
+        description: Deskribapena
+        developer_group: Sustatzailearen taldea
+        domain: Domeinua
+        end_date: Bukaera-data
+        hashtag: Traola
+        hero_image: Orri nagusiko irudia
+        local_area: Antolakuntza eremua
+        meta_scope: 'Metadatuak: esparrua'
+        participatory_process_group_id: Forum-multzoa
+        participatory_scope: Zer erabaki
+        participatory_structure: Nola erabakitzen da?
+        promoted: Nabarmendua
+        published_at: Argitaratu at
+        scope_id: Esparrua
+        scopes_enabled: Esparru gaituak
+        short_description: Deskribapen laburra
+        show_statistics: Erakutsi estatistikak
+        slug: URL laburra
+        start_date: Hasiera-data
+        subtitle: Azpititulua
+        target: Nor parte hartzen du
+        title: Titulua
+      participatory_process_group:
+        description: Deskribapena
+        hero_image: Irudia
+        name: Izena
+        participatory_process_ids: Elkarrekin lotutako foroak
+      participatory_process_step:
+        description: Deskribapena
+        end_date: Bukaera-data
+        short_description: Deskribapen laburra
+        start_date: Hasiera-data
+        title: Titulua
+      participatory_process_user_role:
+        email: Helbide elektronikoa
+        name: Izena
+        role: Rola
+    models:
+      decidim/participatory_process_step_activated_event: Urratsera aktibatuta
+      decidim/participatory_process_step_changed_event: Pasartea aldatu da
+  activerecord:
+    models:
+      decidim/participatory_process:
+        one: Parte hartze forum
+        other: Parte hartze foroak
+      decidim/participatory_process_group:
+        one: Parte-hartze forum taldea
+        other: Parte-hartze foroan taldeak
+      decidim/participatory_process_step:
+        one: Step
+        other: Urratsak
+  decidim:
+    admin:
+      actions:
+        activate: Aktibatu
+        configure: Konfiguratu
+        confirm_destroy: Berretsi ezabatu
+        destroy: ezabatu
+        duplicate: Kopiatu
+        edit: Editatu
+        new_process: Forum berria
+        new_process_group: Forum talde berria
+        new_process_step: Urrats berria
+        new_process_user_role: Forum berria erabiltzailea
+        preview: Aurreikusi
+        publish: Argitaratu
+        resend_invitation: Birbidali gonbita
+        unpublish: Desargitaratu
+      menu:
+        participatory_process_groups: Forum-multzoak
+        participatory_processes: Foroak
+        participatory_processes_submenu:
+          attachment_collections: Karpetak
+          attachment_files: Fitxategiak
+          attachments: Eranskinak
+          categories: Kategoriak
+          components: Osagaiak
+          info: Informazioa
+          moderations: Moderazioak
+          private_users: Erabiltzaile pribatuak
+          process_admins: Forum erabiltzaileak
+          steps: Forum faseak
+      models:
+        participatory_process:
+          fields:
+            created_at: Sortze-data
+            private: Pribatua
+            promoted: Nabarmendua
+            published: Argitaratua
+            title: Titulua
+          name: Forum partizipatiboa
+        participatory_process_group:
+          fields:
+            name: Izena
+          name: Forum-multzoak
+        participatory_process_step:
+          fields:
+            end_date: Bukaera-data
+            start_date: Hasiera-data
+            title: Titulua
+          name: Forum partizipatiboaren fasea
+        participatory_process_user_role:
+          fields:
+            email: Helbide elektronikoa
+            name: Izena
+            role: Rola
+          name: Parte-hartze foroak erabiltzaileak
+          roles:
+            admin: Administratzailea
+            collaborator: Kolaboratzailea
+            moderator: Moderatzailea
+        user:
+          fields:
+            invitation_accepted_at: 'Gonbita egun honetan onartu zen:'
+            invitation_sent_at: 'Gonbita egun honetan bidali zen:'
+      participatory_process_copies:
+        new:
+          copy: Kopiatu
+          select: Aukeratu itzazu kopiatu nahi dituzun datuak
+          title: Partehartze foroaka bikoiztu
+      participatory_process_groups:
+        destroy:
+          success: Parte-hartze foroak taldea zuzen ezabatu da.
+        edit:
+          title: Forum-multzok editatu
+          update: Eguneratu
+        new:
+          create: Sortu
+          title: Forum-multzo berria
+        update:
+          error: Errorea gertatu da multzo hau eguneratzean.
+          success: Multzoa zuzen eguneratu da.
+      participatory_process_publications:
+        create:
+          error: Errorea gertatu da foroak partizipatibo hau argitaratzean.
+          success: Forum zuzen argitaratu da.
+        destroy:
+          error: Errorea gertatu da foroak partizipatibo hau desargitaratzean.
+          success: Forum zuzen desargitaratu da.
+      participatory_process_step_activations:
+        create:
+          error: Errorea gertatu da foroak partizipatiboaren fase hau aktibatzean.
+          success: Forum fasea zuzen aktibatu da.
+      participatory_process_steps:
+        create:
+          error: Errorea gertatu da foroak partizipatiboaren fase berri bat sortzean.
+          success: Forum fasea zuzen sortu da.
+        default_title: Sarrera
+        destroy:
+          error:
+            active_step: Ezin da ezabatu fase aktiboa.
+            last_step: Ezin da ezabatu foroak azken fasea.
+          success: Parte-hartze foroak pausoa arrakastaz ezabatu da.
+        edit:
+          title: Editatu foroak partizipatiboaren fasea
+          update: Eguneratu
+        index:
+          steps_title: Forum faseak
+        new:
+          create: Sortu
+          title: Forum fase berria
+        ordering:
+          error: Errorea gertatu da foroak partizipatibo honen faseak berrantolatzean.
+        update:
+          error: Errorea gertatu da foroak partizipatiboaren fase hau eguneratzean.
+          success: Forum fasea zuzen eguneratu da.
+      participatory_process_user_roles:
+        create:
+          error: Errore bat gertatu da partaidetza foroak honetan erabiltzailea gehitzea.
+          success: Parte hartzaile foroak honi arrakastaz gehitu dio erabiltzaileari.
+        destroy:
+          success: Parte hartzaile foroak honetatik arrakastaz ezabatu da erabiltzailea.
+        edit:
+          title: Editatu foroak erabiltzailea.
+          update: Eguneratu
+        index:
+          process_admins_title: Forum erabiltzaileak
+        new:
+          create: Sortu
+          title: Forum erabiltzaile berria.
+        update:
+          error: Errore bat gertatu da parte hartzaile foroak honetarako erabiltzaile bat.
+          success: Ongi eguneratu da erabiltzailea foroak partizipatibo honetarako.
+      participatory_processes:
+        create:
+          error: Errorea gertatu da foroak partizipatibo berri bat sortzean.
+          success: Forum partizipatiboa zuzen sortu da. Orain ekin iezaiozu faseak konfiguratzeari.
+        destroy:
+          success: Parte-hartze foroak behar bezala ezabatu da.
+        edit:
+          update: Eguneratu
+        form:
+          title: Informazio orokorra
+        index:
+          not_published: Argitaratu gabe
+          private: Pribatua
+          public: Publiko
+          published: Argitaratua
+        new:
+          create: Sortu
+          title: Forum berria
+        update:
+          error: Errorea gertatu da foroak partizipatibo hau eguneratzean.
+          success: Forum zuzen eguneratu da.
+      participatory_processes_copies:
+        create:
+          error: Errorea gertatu da foroak partizipatibo hau kopiatzean.
+          success: Forum zuzen kopiatu da.
+      participatory_processes_group:
+        create:
+          error: Errorea gertatu da multzo hau sortzean.
+          success: Multzoa zuzen eguneratu da.
+      titles:
+        participatory_process_groups: Forum multzoak
+        participatory_processes: Forum partizipatiboak
+      users:
+        resend_invitation:
+          error: Errorea gertatu zen gonbita berriro bidaltzean.
+          success: Gonbita ongi birbidali da.
+    admin_log:
+      participatory_process:
+        create: "%{user_name} sortu %{resource_name} foroak parte-hartzailea"
+        publish: "%{user_name} argitaratu du %{resource_name} foroak parte-hartzailea"
+        unpublish: "%{user_name} argitaratu gabe %{resource_name} foroak parte-hartzailea"
+        update: "%{user_name} %{resource_name} partehartze foroak eguneratu du"
+      participatory_process_step:
+        activate: "%{user_name} %{resource_name} urratsa %{space_name} forum parte-hartzailean aktibatuta"
+        create: "%{user_name} %{resource_name} urratsa %{space_name} partaidetzazko forum sortu zen"
+        delete: "%{user_name} %{resource_name} urratsa %{space_name} partaidetzazko forum ezabatu da"
+        update: "%{user_name} %{resource_name} urratsa %{space_name} parte hartze forum eguneratua"
+      participatory_process_user_role:
+        create: "%{user_name} %{resource_name} erabiltzaile gonbidatu %{space_name} parte hartzerako forum"
+        delete: "%{user_name} erabiltzaileak kendu %{resource_name} from %{space_name} forum parte-hartzailea"
+        update: "%{user_name} erabiltzailearen rola aldatu %{resource_name} en %{space_name} forum parte-hartzailea"
+    events:
+      participatory_process:
+        step_activated:
+          email_intro: '%{resource_title} urratsa aktibo dago %{participatory_space_title}-ra. Orrialde hau ikusi dezakezu:'
+          email_outro: Jakinarazpena jaso duzu %{participatory_space_title}jarraituz gero. Aurreko esteka jarraituz jakinarazpenak jasotzeari uztea erabaki dezakezu.
+          email_subject: '%{participatory_space_title} eguneratze bat'
+          notification_title: '%{resource_title} urratsa aktiboa da <a href="%{resource_path}">%{participatory_space_title}</a>'
+        step_changed:
+          email_intro: '%{participatory_space_title} %{resource_title} urratsen datak eguneratu dira. Orrialde hau ikusi dezakezu:'
+          email_outro: Jakinarazpena jaso duzu %{participatory_space_title}jarraituz gero. Aurreko esteka jarraituz jakinarazpenak jasotzeari uztea erabaki dezakezu.
+          email_subject: '%{participatory_space_title} eguneratze bat'
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> urratsean datak <a href="%{participatory_space_url}">%{participatory_space_title}</a> eguneratu dira.
+    menu:
+      processes: Foroak
+    pages:
+      home:
+        extended:
+          how_to_participate: Nola har dezaket parte foroak batean?
+        statistics:
+          processes_count: Forum
+    participatory_process_groups:
+      show:
+        group_participatory_processes:
+          one: 1 forum %{group}
+          other: "%{count} forum %{group}"
+        title: Parte-hartze foroan taldeak
+    participatory_process_steps:
+      index:
+        process_steps: Forum faseak
+        title: Forum faseak
+    participatory_processes:
+      admin:
+        participatory_process_copies:
+          form:
+            slug_help: 'URL slugs erabiltzen dira foroak hau adierazten duten URLak sortzeko. Letrak, zenbakiak eta marratxoak soilik onartzen ditu eta letra batekin hasi behar duzu. Adibidea: %{url}'
+        participatory_processes:
+          form:
+            announcement_help: Hemen sartzen duzun testua erabiltzaileari erakutsiko zaio foroak informazioaren azpitik.
+            slug_help: 'URL slugs erabiltzen dira forum hau adierazten duten URLak sortzeko. Letrak, zenbakiak eta marratxoak soilik onartzen ditu eta letra batekin hasi behar duzu. Adibidea: %{url}'
+      content_blocks:
+        highlighted_processes:
+          name: Forum nabarmenak
+      index:
+        title: Forum
+      pages:
+        home:
+          highlighted_processes:
+            active_processes: Forum aktiboak
+            active_step: Urratsa aktiboa
+            more_information: Informazio gehiago
+            participate: Parte hartu
+            see_all_processes: Ikusi forum guztiak
+      participatory_process_groups:
+        none: Bat bera ere ez
+      participatory_processes:
+        filters:
+          counters:
+            active:
+              one: 1 forum aktibo
+              other: "%{count} forum aktiboak"
+            all:
+              one: 1 forum
+              other: "%{count} forum"
+            past:
+              one: 1 iraganeko forum
+              other: "%{count} forum iraganean"
+            upcoming:
+              one: 1 hurrengo forum
+              other: "%{count} hurrengo forumetan"
+          explanations:
+            no_active: Ez dago forum aktiborik
+            no_active_nor_upcoming: Forum aktibo ez etorkizunik ez
+            no_active_nor_upcoming_callout: Forum aktibo eta ez datoz bat. Hona hemen iraganekoen zerrenda.
+          names:
+            active: Aktiboa
+            all: guztiak
+            past: Aurrekoak
+            upcoming: Hurrengoak
+          see: Ikusi
+        index:
+          loading: Emaitzak kargatzen...
+      show:
+        developer_group: Sustatzailearen taldea
+        end_date: Bukaera-data
+        local_area: Antolakuntza eremua
+        participatory_scope: Zer erabaki
+        participatory_structure: Nola erabakitzen da?
+        private_space: Forum pribatua da
+        scope: Esparrua
+        start_date: Hasiera-data
+        target: Nork parte hartzen du
+        unspecified: Zehaztu gabea
+      statistics:
+        answers_count: Erantzunak
+        comments_count: Iruzkinak
+        debates_count: eztabaidak
+        endorsements_count: Oniritziak
+        headline: Jarduera
+        meetings_count: Topaketak
+        orders_count: Euskarriak
+        pages_count: Orriak
+        processes_count: Foroak
+        projects_count: Proiektuak
+        proposals_count: Proposamenak
+        results_count: Emaitzak
+        surveys_count: Inkestak
+        users_count: Parte-hartzaileak
+        votes_count: Euskarriak
+  devise:
+    mailer:
+      invite_private_user:
+        subject: Parte hartzaile foroak pribatu batera gonbidatu zaituzte %{organization} helbidean
+    sessions:
+      new:
+        sign_in: Saioa hasi
+    shared:
+      links:
+        back: Atzera
+        didn_t_receive_confirmation_instructions: Ez al duzu baieztatu argibideak?
+        didn_t_receive_unlock_instructions: Ez al zuten desblokeatze-argibideak jaso?
+        forgot_your_password: Zure pasahitza ahaztu duzu?
+        sign_in: Saioa hasi
+        sign_in_with_provider: Saioa hasi ekin %{provider}
+        sign_up: Erregistratu
+      minimum_password_length:
+        one: "(%{count} karaktere minimoa)"
+        other: "(%{count} karaktere gutxieneko)"
+  layouts:
+    decidim:
+      participatory_process_groups:
+        participatory_process_group:
+          browse: Arakatu
+          processes_count: 'Foroak:'
+      participatory_process_widgets:
+        show:
+          active_step: Fase aktiboa
+          take_part: Parte hartu
+      participatory_processes:
+        index:
+          promoted_processes: Forum nabarmenduak
+        participatory_process:
+          active_step: 'Oraingo fasea:'
+          take_part: Parte hartu
+        promoted_process:
+          active_step: 'Oraingo fasea:'
+          more_info: Informazio gehiago
+          take_part: Parte hartu
+      process_header:
+        process_menu_item: Forum
+        unfold: Zabaldu
+      process_header_steps:
+        step: '%{total} fasetatik %{current}.a'
+        view_steps: Ikusi faseak

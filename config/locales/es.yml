@@ -1,0 +1,381 @@
+es:
+  activemodel:
+    attributes:
+      participatory_process:
+        announcement: Anuncio
+        banner_image: Imagen de banner
+        copy_categories: Copiar categorías
+        copy_components: Copiar componentes
+        copy_steps: Copiar las fases
+        description: Descripción
+        developer_group: Grupo promotor
+        domain: Dominio
+        end_date: Fecha de finalización
+        hashtag: Hashtag
+        hero_image: Imagen de portada
+        local_area: Área de organización
+        meta_scope: 'Metadatos: ámbito'
+        participatory_process_group_id: Grupo de foros
+        participatory_scope: Qué se decide
+        participatory_structure: Cómo se decide
+        promoted: Destacado
+        published_at: Publicado en
+        scope_id: Ámbito
+        scopes_enabled: Ámbitos habilitados
+        short_description: Descripción breve
+        show_statistics: Mostrar estadísticas
+        slug: Texto corto de URL
+        start_date: Fecha de inicio
+        subtitle: Subtítulo
+        target: Quién participa
+        title: Título
+      participatory_process_group:
+        description: Descripción
+        hero_image: Imagen
+        name: Nombre
+        participatory_process_ids: Foros relacionados
+      participatory_process_step:
+        description: Descripción
+        end_date: Fecha de finalización
+        short_description: Descripción breve
+        start_date: Fecha de inicio
+        title: Título
+      participatory_process_user_role:
+        email: Correo electrónico
+        name: Nombre
+        role: Rol
+    models:
+      decidim/participatory_process_step_activated_event: Fase activada
+      decidim/participatory_process_step_changed_event: La fase ha cambiado
+  activerecord:
+    models:
+      decidim/participatory_process:
+        one: Foro
+        other: Foros
+      decidim/participatory_process_group:
+        one: Grupo de foros
+        other: Grupos de foros
+      decidim/participatory_process_step:
+        one: Fase
+        other: Fases
+  decidim:
+    admin:
+      actions:
+        activate: Activar
+        configure: Configurar
+        confirm_destroy: Confirma la supresión.
+        destroy: Borrar
+        duplicate: Duplicar
+        edit: Editar
+        new_process: Nuevo foro
+        new_process_group: Nuevo grupo de foros
+        new_process_step: Nueva fase
+        new_process_user_role: Nuevo usuario de foro
+        preview: Previsualizar
+        publish: Publicar
+        resend_invitation: Reenviar invitación
+        unpublish: Despublicar
+      menu:
+        participatory_process_groups: Grupos de foros
+        participatory_processes: Foros
+        participatory_processes_submenu:
+          attachment_collections: Carpetas
+          attachment_files: Archivos
+          attachments: Archivos adjuntos
+          categories: Categorías
+          components: Componentes
+          info: Información
+          moderations: Moderaciones
+          private_users: Usuarios privados
+          process_admins: Usuarios del foro
+          steps: Fases del foro
+      models:
+        participatory_process:
+          fields:
+            created_at: Fecha de creación
+            private: Privado
+            promoted: Destacado
+            published: Publicada
+            title: Título
+          name: Foro
+        participatory_process_group:
+          fields:
+            name: Nombre
+          name: Grupo de foros
+        participatory_process_step:
+          fields:
+            end_date: Fecha de finalización
+            start_date: Fecha de inicio
+            title: Título
+          name: Fase de foro
+        participatory_process_user_role:
+          fields:
+            email: Correo electrónico
+            name: Nombre
+            role: Rol
+          name: Usuario de foro
+          roles:
+            admin: Administrador
+            collaborator: Colaborador
+            moderator: Moderador
+        user:
+          fields:
+            invitation_accepted_at: Invitación aceptada el día
+            invitation_sent_at: Invitación enviada el día
+      participatory_process_copies:
+        new:
+          copy: Copiar
+          select: Seleccione los datos que desea duplicar
+          title: Duplicar foro
+      participatory_process_groups:
+        destroy:
+          success: El grupo de foro se eliminó con éxito.
+        edit:
+          title: Editar grupo de foros
+          update: Actualizar
+        new:
+          create: Crear
+          title: Nuevo grupo de foros
+        update:
+          error: Se ha producido un error actualizando este grupo.
+          success: Grupo actualizado correctamente.
+      participatory_process_publications:
+        create:
+          error: Se ha producido un error al publicar este foro.
+          success: El foro se ha publicado correctamente.
+        destroy:
+          error: Se ha producido un error al despublicar este foro.
+          success: El foro se ha despublicado correctamente.
+      participatory_process_step_activations:
+        create:
+          error: Se ha producido un error al activar esta fase de foro.
+          success: La fase de foro se ha activado correctamente.
+      participatory_process_steps:
+        create:
+          error: Se ha producido un error al crear una nueva fase de foro.
+          success: La fase de foro se ha creado correctamente.
+        default_title: Introducción
+        destroy:
+          error:
+            active_step: No se puede eliminar la fase activa.
+            last_step: No se puede eliminar la última fase de un foro.
+          success: Fase de foro eliminada con éxito.
+        edit:
+          title: Editar fase de foro
+          update: Actualizar
+        index:
+          steps_title: Fases del foro
+        new:
+          create: Crear
+          title: Nuevo fase de foro
+        ordering:
+          error: Se ha producido un error en la reordenación de las fases de este foro.
+        update:
+          error: Se ha producido un error en la actualización de esta fase de foro.
+          success: La fase de foro se ha actualizado correctamente.
+      participatory_process_user_roles:
+        create:
+          error: Ha habido un error al agregar un usuario a este foro.
+          success: Usuario añadido con éxito a este foro.
+        destroy:
+          success: Usuario eliminado con éxito de este foro.
+        edit:
+          title: Editar usuario del foro
+          update: Actualizar
+        index:
+          process_admins_title: Usuarios del foro
+        new:
+          create: Crear
+          title: Nuevo usuario del foro
+        update:
+          error: Ha habido un error al actualizar un usuario para este foro.
+          success: Usuario actualizado correctamente para este foro.
+      participatory_processes:
+        create:
+          error: Se ha producido un error al crear un nuevo foro.
+          success: El foro se ha creado correctamente. Sigue ahora con la configuración de las fases.
+        destroy:
+          success: Foro eliminado con éxito.
+        edit:
+          update: Actualizar
+        form:
+          title: Información general
+        index:
+          not_published: No publicado
+          private: Privado
+          public: Público
+          published: Publicada
+        new:
+          create: Crear
+          title: Nuevo foro
+        update:
+          error: Se ha producido un error en la actualización de este foro.
+          success: El foro se ha actualizado correctamente.
+      participatory_processes_copies:
+        create:
+          error: Hubo un error al duplicar este foro.
+          success: El foro se duplicó con éxito.
+      participatory_processes_group:
+        create:
+          error: Se ha producido un error al crear este grupo.
+          success: Grupo creado correctamente.
+      titles:
+        participatory_process_groups: Grupos de foros
+        participatory_processes: Foros
+      users:
+        resend_invitation:
+          error: Hubo un error al volver a enviar la invitación.
+          success: Invitación reenviada con éxito.
+    admin_log:
+      participatory_process:
+        create: "%{user_name} creó el foro %{resource_name}"
+        publish: "%{user_name} publicó el foro %{resource_name}"
+        unpublish: "%{user_name} despublicó el foro %{resource_name}"
+        update: "%{user_name} actualizó el foro %{resource_name}"
+      participatory_process_step:
+        activate: "%{user_name} activó la fase %{resource_name} en el foro %{space_name}"
+        create: "%{user_name} creó la fase %{resource_name} en el foro %{space_name}"
+        delete: "%{user_name} eliminó la fase %{resource_name} en el foro %{space_name}"
+        update: "%{user_name} actualizó la fase %{resource_name} en el foro %{space_name}"
+      participatory_process_user_role:
+        create: "%{user_name} invitó al usuario %{resource_name} al foro %{space_name}"
+        delete: "%{user_name} eliminó al usuario %{resource_name} del foro %{space_name}"
+        update: "%{user_name} cambió el rol del usuario %{resource_name} en el foro %{space_name}"
+    events:
+      participatory_process:
+        step_activated:
+          email_intro: 'Ya está activa la fase %{resource_title} para %{participatory_space_title}. Puedes verla desde esta página:'
+          email_outro: Has recibido esta notificación porque estás siguiendo %{participatory_space_title}. Puedes dejar de recibir notificaciones siguiendo el enlace anterior.
+          email_subject: Una actualización de %{participatory_space_title}
+          notification_title: Ya está activa la fase %{resource_title} para <a href="%{resource_path}">%{participatory_space_title}</a>
+        step_changed:
+          email_intro: 'Se han actualizado las fechas para la fase %{resource_title} en %{participatory_space_title}. Puedes verlas desde esta página:'
+          email_outro: Has recibido esta notificación porque estás siguiendo %{participatory_space_title}. Puedes dejar de recibir notificaciones siguiendo el enlace anterior.
+          email_subject: Una actualización de %{participatory_space_title}
+          notification_title: Se han actualizado las fechas de la fase <a href="%{resource_path}">%{resource_title}</a> en <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+    menu:
+      processes: Foros
+    pages:
+      home:
+        extended:
+          how_to_participate: '¿Cómo tomo parte en un foro?'
+        statistics:
+          processes_count: Foros
+    participatory_process_groups:
+      show:
+        group_participatory_processes:
+          one: 1 foro para %{group}
+          other: "%{count} foros para %{group}"
+        title: Grupos de foros
+    participatory_process_steps:
+      index:
+        process_steps: Las fases de foro
+        title: Fases del foro
+    participatory_processes:
+      admin:
+        participatory_process_copies:
+          form:
+            slug_help: 'Los textos cortos de URL se utilizan para generar las URL que apuntan a este foro. Sólo acepta letras, números y guiones, y debe comenzar con una letra. Ejemplo: %{url}'
+        participatory_processes:
+          form:
+            announcement_help: El texto que ingreses aquí se mostrará al usuario justo debajo de la información del foro.
+            slug_help: 'Los textos cortos de URL se utilizan para generar las URL que apuntan a este foro. Sólo acepta letras, números y guiones, y debe comenzar con una letra. Ejemplo: %{url}'
+      content_blocks:
+        highlighted_processes:
+          name: Foros destacados
+      index:
+        title: Foros
+      pages:
+        home:
+          highlighted_processes:
+            active_processes: Foros activos
+            active_step: Paso activo
+            more_information: Más información
+            participate: Participar
+            see_all_processes: Ver todos los foros
+      participatory_process_groups:
+        none: Ninguna
+      participatory_processes:
+        filters:
+          counters:
+            active:
+              one: 1 foro activo
+              other: "%{count} foros activos"
+            all:
+              one: 1 foro
+              other: "%{count} foros"
+            past:
+              one: 1 foro pasado
+              other: "%{count} foros pasados"
+            upcoming:
+              one: 1 próximo foro
+              other: "%{count} próximos foros"
+          explanations:
+            no_active: Sin foros activos
+            no_active_nor_upcoming: Sin foros activos ni futuros
+            no_active_nor_upcoming_callout: No hay foros activos ni futuros. Aquí hay una lista de los pasados.
+          names:
+            active: Activa
+            all: Todos
+            past: Pasadas
+            upcoming: Próximas
+          see: Ver
+        index:
+          loading: Cargando resultados...
+      show:
+        developer_group: Grupo promotor
+        end_date: Fecha de finalización
+        local_area: Área de organización
+        participatory_scope: Qué se decide
+        participatory_structure: Cómo se decide
+        private_space: Este es un foro privado
+        scope: Ámbito
+        start_date: Fecha de inicio
+        target: Quién participa
+        unspecified: No especificado
+      statistics:
+        answers_count: Respuestas
+        comments_count: Comentarios
+        debates_count: Debates
+        endorsements_count: Adhesiones
+        headline: Actividad
+        meetings_count: Encuentros
+        orders_count: Votos
+        pages_count: Páginas
+        processes_count: Foros
+        projects_count: Proyectos
+        proposals_count: Propuestas
+        results_count: Resultados
+        surveys_count: Encuestas
+        users_count: Participantes
+        votes_count: Apoyos
+  devise:
+    mailer:
+      invite_private_user:
+        subject: Has sido invitado a un foro privado de participación en %{organization}
+  layouts:
+    decidim:
+      participatory_process_groups:
+        participatory_process_group:
+          browse: Explorar
+          processes_count: 'Foros:'
+      participatory_process_widgets:
+        show:
+          active_step: Fase activa
+          take_part: Participa
+      participatory_processes:
+        index:
+          promoted_processes: Foros destacados
+        participatory_process:
+          active_step: 'Fase actual:'
+          take_part: Participa
+        promoted_process:
+          active_step: 'Fase actual:'
+          more_info: Más información
+          take_part: Participa
+      process_header:
+        process_menu_item: El foro
+        unfold: Desplegar
+      process_header_steps:
+        step: Fase %{current} de %{total}
+        view_steps: Ver las fases

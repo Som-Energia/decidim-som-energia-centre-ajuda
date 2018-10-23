@@ -1,0 +1,396 @@
+gl:
+  activemodel:
+    attributes:
+      participatory_process:
+        announcement: Anuncio
+        banner_image: Imaxe do banner
+        copy_categories: Copiar categorías
+        copy_components: Copiar compoñentes
+        copy_steps: Copiar os pasos
+        description: Descrición
+        developer_group: Grupo promotor
+        domain: Dominio
+        end_date: Data de finalización
+        hashtag: Etiqueta
+        hero_image: Imaxe na casa
+        local_area: Área de organización
+        meta_scope: Metadatos de ámbito
+        participatory_process_group_id: Grupo de foros
+        participatory_scope: O que se decide
+        participatory_structure: Como se decide
+        promoted: Promocionado
+        published_at: Publicado en
+        scope_id: Alcance
+        scopes_enabled: Ámbitos habilitados
+        short_description: Descrición curta
+        show_statistics: Amosar estatísticas
+        slug: URL slug
+        start_date: Data de inicio
+        subtitle: Subtítulo
+        target: Quen participa
+        title: Título
+      participatory_process_group:
+        description: Descrición
+        hero_image: Imaxe
+        name: Nome
+        participatory_process_ids: Foros relacionados
+      participatory_process_step:
+        description: Descrición
+        end_date: Data de finalización
+        short_description: Descrición curta
+        start_date: Data de inicio
+        title: Título
+      participatory_process_user_role:
+        email: Correo electrónico
+        name: Nome
+        role: Rol
+    models:
+      decidim/participatory_process_step_activated_event: Paso activado
+      decidim/participatory_process_step_changed_event: O paso cambiou
+  activerecord:
+    models:
+      decidim/participatory_process:
+        one: Foro
+        other: Foros
+      decidim/participatory_process_group:
+        one: Grupo de foros
+        other: Grupos de foros
+      decidim/participatory_process_step:
+        one: Paso
+        other: Pasos
+  decidim:
+    admin:
+      actions:
+        activate: Activar
+        configure: Configurar
+        confirm_destroy: Confirma eliminar
+        destroy: Eliminar
+        duplicate: Duplicar
+        edit: Editar
+        new_process: Novo foro
+        new_process_group: Novo grupo de foros
+        new_process_step: Novo paso
+        new_process_user_role: Novo usuario do foro
+        preview: Vista previa
+        publish: Publicar
+        resend_invitation: Reenvio a invitación
+        unpublish: Non publicar
+      menu:
+        participatory_process_groups: Grupos de foros
+        participatory_processes: Foros
+        participatory_processes_submenu:
+          attachment_collections: Carpetas
+          attachment_files: Arquivos
+          attachments: Anexos
+          categories: Categorías
+          components: Compoñentes
+          info: Información
+          moderations: Moderacións
+          private_users: Usuarios privados
+          process_admins: Usuarios do foro
+          steps: Pasos
+      models:
+        participatory_process:
+          fields:
+            created_at: Creado en
+            private: Privado
+            promoted: Destacado
+            published: Publicado
+            title: Título
+          name: Foro
+        participatory_process_group:
+          fields:
+            name: Nome
+          name: Grupo de foros
+        participatory_process_step:
+          fields:
+            end_date: Data de finalización
+            start_date: Data de inicio
+            title: Título
+          name: Paso de foro
+        participatory_process_user_role:
+          fields:
+            email: Correo electrónico
+            name: Nome
+            role: Rol
+          name: Usuario de foro
+          roles:
+            admin: Administrador
+            collaborator: Colaborador
+            moderator: Moderador
+        user:
+          fields:
+            invitation_accepted_at: Invitación aceptada no
+            invitation_sent_at: Invitación enviada a
+      participatory_process_copies:
+        new:
+          copy: Copiar
+          select: Seleccione os datos que desexa duplicar
+          title: Duplicar o foro
+      participatory_process_groups:
+        destroy:
+          success: Grupo de foro eliminado con éxito.
+        edit:
+          title: Editar o grupo de foros
+          update: Actualización
+        new:
+          create: Crear
+          title: Novo grupo de foros
+        update:
+          error: Produciuse un erro ao actualizar este grupo de foros.
+          success: Grupo de foro actualizado con éxito.
+      participatory_process_publications:
+        create:
+          error: Produciuse un erro ao publicar este foro.
+          success: Foro publicado con éxito.
+        destroy:
+          error: Produciuse un erro ao publicar este foro.
+          success: O foro non se publicou con éxito.
+      participatory_process_step_activations:
+        create:
+          error: Produciuse un erro ao activar este paso de foro.
+          success: O paso do foro activouse con éxito.
+      participatory_process_steps:
+        create:
+          error: Produciuse un erro ao crear un novo paso de foro.
+          success: Paso de foro creouse con éxito.
+        default_title: Introdución
+        destroy:
+          error:
+            active_step: Non se pode eliminar o paso activo.
+            last_step: Non se pode eliminar o último paso dun foro.
+          success: Paso de foro eliminado con éxito.
+        edit:
+          title: Edita paso de foro
+          update: Actualización
+        index:
+          steps_title: Pasos
+        new:
+          create: Crear
+          title: Novo paso de foro
+        ordering:
+          error: Produciuse un erro ao reordenar estes pasos de foro.
+        update:
+          error: Produciuse un erro ao actualizar este paso de foro.
+          success: Paso de foro actualizado con éxito.
+      participatory_process_user_roles:
+        create:
+          error: Houbo un erro engadindo un usuario a este foro.
+          success: O usuario engadiuse con éxito a este foro.
+        destroy:
+          success: Usuario eliminado con éxito deste foro.
+        edit:
+          title: Actualiza o usuario de foro.
+          update: Actualización
+        index:
+          process_admins_title: Usuarios de foros
+        new:
+          create: Crear
+          title: Novo usuario de foro.
+        update:
+          error: Houbo un erro actualizado por un usuario para este foro.
+          success: Usuario actualizado correctamente para este foro.
+      participatory_processes:
+        create:
+          error: Produciuse un erro ao crear un novo foro.
+          success: Foro creouse con éxito. Configure agora os seus pasos.
+        destroy:
+          success: O foro eliminouse con éxito.
+        edit:
+          update: Actualización
+        form:
+          title: Información xeral
+        index:
+          not_published: Non publicado
+          private: Privado
+          public: Público
+          published: Publicado
+        new:
+          create: Crear
+          title: Novo foro
+        update:
+          error: Produciuse un erro ao actualizar este foro.
+          success: Foro actualizado con éxito.
+      participatory_processes_copies:
+        create:
+          error: Produciuse un erro ao duplicar este foro.
+          success: O foro duplicouse con éxito.
+      participatory_processes_group:
+        create:
+          error: Produciuse un erro ao crear un novo grupo de foros.
+          success: Grupo de foro creouse con éxito.
+      titles:
+        participatory_process_groups: Grupos de foros
+        participatory_processes: Foros
+      users:
+        resend_invitation:
+          error: Produciuse un erro ao reenviar a invitación.
+          success: A invitación resérvase con éxito.
+    admin_log:
+      participatory_process:
+        create: "%{user_name} creou o foro %{resource_name}"
+        publish: "%{user_name} publicou o %{resource_name} foro"
+        unpublish: "%{user_name} non publicou o foro %{resource_name}"
+        update: "%{user_name} actualizou o foro %{resource_name}"
+      participatory_process_step:
+        activate: "%{user_name} activou o paso %{resource_name} no foro %{space_name}"
+        create: "%{user_name} creou o paso %{resource_name} no foro %{space_name}"
+        delete: "%{user_name} eliminou o paso %{resource_name} no foro %{space_name}"
+        update: "%{user_name} actualizou o paso %{resource_name} no foro %{space_name}"
+      participatory_process_user_role:
+        create: "%{user_name} convidou ao usuario %{resource_name} ao foro %{space_name}"
+        delete: "%{user_name} eliminou o usuario %{resource_name} do foro %{space_name}"
+        update: "%{user_name} cambiou o papel do usuario %{resource_name} no foro %{space_name}"
+    events:
+      participatory_process:
+        step_activated:
+          email_intro: 'O paso %{resource_title} está agora activo para %{participatory_space_title}. Podes velo desde esta páxina:'
+          email_outro: Recibiches esta notificación porque estás seguindo %{participatory_space_title}. Podes deixar de recibir notificacións seguindo a ligazón anterior.
+          email_subject: Unha actualización a %{participatory_space_title}
+          notification_title: O paso %{resource_title} está agora activo para <a href="%{resource_path}">%{participatory_space_title}</a>
+        step_changed:
+          email_intro: 'As datas para o paso %{resource_title} en %{participatory_space_title} foron actualizadas. Podes velo desde esta páxina:'
+          email_outro: Recibiches esta notificación porque estás seguindo %{participatory_space_title}. Podes deixar de recibir notificacións seguindo a ligazón anterior.
+          email_subject: Unha actualización a %{participatory_space_title}
+          notification_title: As datas para o <a href="%{resource_path}">%{resource_title}</a> paso en <a href="%{participatory_space_url}">%{participatory_space_title}</a> foron actualizadas.
+    menu:
+      processes: Foros
+    pages:
+      home:
+        extended:
+          how_to_participate: '¿Como participo nun forum?'
+        statistics:
+          processes_count: Forum
+    participatory_process_groups:
+      show:
+        group_participatory_processes:
+          one: 1 foros para %{group}
+          other: "%{count} foros para %{group}"
+        title: Grupos de foros
+    participatory_process_steps:
+      index:
+        process_steps: Pasos do foro
+        title: Pasos de foro
+    participatory_processes:
+      admin:
+        participatory_process_copies:
+          form:
+            slug_help: 'As babosas de URL úsanse para xerar os URL que apuntan a este foro. Só acepta letras, números e guións, e debe comezar cunha letra. Exemplo: %{url}'
+        participatory_processes:
+          form:
+            announcement_help: O texto que introduce aquí será mostrado ao usuario debaixo da información do foro.
+            slug_help: 'As babosas de URL úsanse para xerar os URL que apuntan a este foro. Só acepta letras, números e guións, e debe comezar cunha letra. Exemplo: %{url}'
+      content_blocks:
+        highlighted_processes:
+          name: Foros destacados
+      index:
+        title: Foros
+      pages:
+        home:
+          highlighted_processes:
+            active_processes: Foros activos
+            active_step: Paso activo
+            more_information: Máis información
+            participate: Participar
+            see_all_processes: Ver todos os foros
+      participatory_process_groups:
+        none: Nada
+      participatory_processes:
+        filters:
+          counters:
+            active:
+              one: 1 foro activo
+              other: "%{count} foros activos"
+            all:
+              one: 1 foro
+              other: "%{count} foros"
+            past:
+              one: 1 foro pasado
+              other: "%{count} foros pasados"
+            upcoming:
+              one: 1 foro seguinte
+              other: "%{count} próximos foros"
+          explanations:
+            no_active: Non hai foros activos
+            no_active_nor_upcoming: Non hai foros activos nin futuros
+            no_active_nor_upcoming_callout: Non hai foros activos nin próximos. Aquí tes unha lista dos últimos.
+          names:
+            active: Activo
+            all: Todo
+            past: Pasado
+            upcoming: Próximos
+          see: Ver
+        index:
+          loading: Cargando resultados ...
+      show:
+        developer_group: Grupo promotor
+        end_date: Data de finalización
+        local_area: Área de organización
+        participatory_scope: O que se decide
+        participatory_structure: Como se decide
+        private_space: Este é un foro privado
+        scope: Alcance
+        start_date: Data de inicio
+        target: Quen participa
+        unspecified: Non especificado
+      statistics:
+        answers_count: Respostas
+        comments_count: Comentarios
+        debates_count: Debates
+        endorsements_count: Aprobacións
+        headline: Actividade
+        meetings_count: Reunións
+        orders_count: Votos
+        pages_count: Páxinas
+        processes_count: Foros
+        projects_count: Proxectos
+        proposals_count: Propostas
+        results_count: Resultados
+        surveys_count: Enquisas
+        users_count: Participantes
+        votes_count: Votos
+  devise:
+    mailer:
+      invite_private_user:
+        subject: Invitouse a un foro privado en %{organization}
+    sessions:
+      new:
+        sign_in: Iniciar sesión
+    shared:
+      links:
+        back: De volta
+        didn_t_receive_confirmation_instructions: Non recibiches instrucións de confirmación?
+        didn_t_receive_unlock_instructions: Non recibiches instrucións de desbloqueo?
+        forgot_your_password: Esqueceu o contrasinal?
+        sign_in: Iniciar sesión
+        sign_in_with_provider: Inicia sesión con %{provider}
+        sign_up: Rexistrarse
+      minimum_password_length:
+        one: "(%{count} carácter mínimo"
+        other: "(%{count} caracteres mínimos)"
+  layouts:
+    decidim:
+      participatory_process_groups:
+        participatory_process_group:
+          browse: Buscar
+          processes_count: 'Foros:'
+      participatory_process_widgets:
+        show:
+          active_step: Paso activo
+          take_part: Tomar parte en
+      participatory_processes:
+        index:
+          promoted_processes: Foros destacados
+        participatory_process:
+          active_step: 'Paso actual:'
+          take_part: Tomar parte en
+        promoted_process:
+          active_step: 'Paso actual:'
+          more_info: Máis información
+          take_part: Tomar parte en
+      process_header:
+        process_menu_item: O foro
+        unfold: Despregar
+      process_header_steps:
+        step: Paso %{current} de %{total}
+        view_steps: Ver pasos

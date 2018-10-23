@@ -1,0 +1,381 @@
+ca:
+  activemodel:
+    attributes:
+      participatory_process:
+        announcement: Anunci
+        banner_image: Imatge de bàner
+        copy_categories: Copiar categories
+        copy_components: Copiar components
+        copy_steps: Copiar fases
+        description: Descripció
+        developer_group: Grup promotor
+        domain: Àrees municipals
+        end_date: Data de finalització
+        hashtag: Hashtag
+        hero_image: Imatge de portada
+        local_area: Àrea d'organització
+        meta_scope: Metadades d'àmbit
+        participatory_process_group_id: Grup de fòrums
+        participatory_scope: El que es decideix
+        participatory_structure: Com es decideix
+        promoted: Destacat
+        published_at: Publicat el
+        scope_id: Àmbit
+        scopes_enabled: Àmbit habilitat
+        short_description: Descripció breu
+        show_statistics: Mostra estadístiques
+        slug: Nom curt d'URL
+        start_date: Data d'inici
+        subtitle: Subtítol
+        target: Qui participa
+        title: Títol
+      participatory_process_group:
+        description: Descripció
+        hero_image: Imatge
+        name: Nom
+        participatory_process_ids: Fòrums relacionats
+      participatory_process_step:
+        description: Descripció
+        end_date: Data de finalització
+        short_description: Descripció breu
+        start_date: Data d'inici
+        title: Títol
+      participatory_process_user_role:
+        email: Correu electrònic
+        name: Nom
+        role: Rol
+    models:
+      decidim/participatory_process_step_activated_event: Pas activat
+      decidim/participatory_process_step_changed_event: Pas canviat
+  activerecord:
+    models:
+      decidim/participatory_process:
+        one: Fòrum
+        other: Fòrums
+      decidim/participatory_process_group:
+        one: Grup de fòrum
+        other: Grups de fòrum
+      decidim/participatory_process_step:
+        one: Fase
+        other: Fases
+  decidim:
+    admin:
+      actions:
+        activate: Activar
+        configure: Configurar
+        confirm_destroy: Confirma eliminació
+        destroy: Suprimeix
+        duplicate: Duplicar
+        edit: Editar
+        new_process: Nou fòrum
+        new_process_group: Nou grup de fòrums
+        new_process_step: Nova fase
+        new_process_user_role: Nou usuari del fòrum
+        preview: Previsualitzar
+        publish: Publicar
+        resend_invitation: Tornar a enviar invitació
+        unpublish: Despublicar
+      menu:
+        participatory_process_groups: Grups de fòrums
+        participatory_processes: Fòrums
+        participatory_processes_submenu:
+          attachment_collections: Carpetes
+          attachment_files: Fitxers
+          attachments: Adjunts
+          categories: Categories
+          components: Components
+          info: Informació
+          moderations: Moderacions
+          private_users: Usuaris privats
+          process_admins: Usuaris del fòrum
+          steps: Fases del fòrum
+      models:
+        participatory_process:
+          fields:
+            created_at: Data de creació
+            private: Privat
+            promoted: Destacat
+            published: Publicat
+            title: Títol
+          name: Fòrum
+        participatory_process_group:
+          fields:
+            name: Nom
+          name: Grup de fòrums
+        participatory_process_step:
+          fields:
+            end_date: Data de finalització
+            start_date: Data d'inici
+            title: Títol
+          name: Name
+        participatory_process_user_role:
+          fields:
+            email: Correu electrònic
+            name: Nom
+            role: Rol
+          name: Usuari de fòrum
+          roles:
+            admin: Administrador
+            collaborator: Col·laborador
+            moderator: Moderador
+        user:
+          fields:
+            invitation_accepted_at: Invitació acceptada el
+            invitation_sent_at: Invitació enviada el
+      participatory_process_copies:
+        new:
+          copy: Còpia
+          select: Selecciona quines dades vols duplicar
+          title: Duplicar fòrum
+      participatory_process_groups:
+        destroy:
+          success: El grup de fòrums s'ha suprimit correctament.
+        edit:
+          title: Editar grup de fòrum
+          update: Actualitzar
+        new:
+          create: Crear
+          title: Nou grup de fòrums
+        update:
+          error: Hi ha hagut un error actualitzant aquest grup de fòrums.
+          success: Grup de fòrum actualitzat correctament.
+      participatory_process_publications:
+        create:
+          error: S'ha produït un error en publicar aquest fòrum.
+          success: El fòrum s'ha publicat correctament.
+        destroy:
+          error: S'ha produït un error en despublicar aquest fòrum.
+          success: El fòrum s'ha despublicat correctament.
+      participatory_process_step_activations:
+        create:
+          error: S'ha produït un error en activar aquesta fase de fòrum.
+          success: La fase de fòrum s'ha activat correctament.
+      participatory_process_steps:
+        create:
+          error: S'ha produït un error en crear una nova fase de fòrum.
+          success: La fase de fòrum s'ha creat correctament.
+        default_title: Introducció
+        destroy:
+          error:
+            active_step: No es pot eliminar la fase activa.
+            last_step: No es pot eliminar l'última fase d'un fòrum.
+          success: La fase del fòrum s'ha eliminat correctament.
+        edit:
+          title: Editar fase de fòrum
+          update: Actualitzar
+        index:
+          steps_title: Fases del fòrum
+        new:
+          create: Crear
+          title: Nova fase de fòrum
+        ordering:
+          error: S'ha produït un error en la reordenació de les fases d'aquest fòrum.
+        update:
+          error: S'ha produït un error en l'actualització d'aquesta fase de fòrum.
+          success: La fase de fòrum s'ha actualitzat correctament.
+      participatory_process_user_roles:
+        create:
+          error: S'ha produït un error en afegir un usuari a aquest fòrum.
+          success: L'usuari s'ha afegit amb èxit a aquest fòrum.
+        destroy:
+          success: L'usuari s'ha eliminat correctament d'aquest fòrum.
+        edit:
+          title: Editar usuari de fòrum.
+          update: Actualitzar
+        index:
+          process_admins_title: Usuaris del fòrum
+        new:
+          create: Crear
+          title: Nou usuari de fòrum.
+        update:
+          error: S'ha produït un error en l'actualització d'un usuari per a aquest fòrum.
+          success: Usuari actualitzat satisfactòriament per a aquest fòrum.
+      participatory_processes:
+        create:
+          error: S'ha produït un error en crear un nou fòrum.
+          success: El fòrum s'ha creat correctament. Continua ara amb la configuració de les fases.
+        destroy:
+          success: El fòrum s'ha eliminat correctament.
+        edit:
+          update: Actualitzar
+        form:
+          title: Informació general
+        index:
+          not_published: No publicada
+          private: Privat
+          public: Públic
+          published: Publicat
+        new:
+          create: Crear
+          title: Nou fòrum
+        update:
+          error: S'ha produït un error en l'actualització d'aquest fòrum.
+          success: El fòrum s'ha actualitzat correctament.
+      participatory_processes_copies:
+        create:
+          error: Hi ha hagut un error duplicant el fòrum.
+          success: El fòrum ha estat duplicat correctament.
+      participatory_processes_group:
+        create:
+          error: S'ha produït un error creant aquest grup de fòrums.
+          success: Grup de fòrums creat correctament.
+      titles:
+        participatory_process_groups: Grups de fòrums
+        participatory_processes: Fòrums
+      users:
+        resend_invitation:
+          error: Hi ha hagut un error reenviant la invitació.
+          success: Invitació reenviada amb èxit.
+    admin_log:
+      participatory_process:
+        create: "%{user_name} ha creat el fòrum %{resource_name}"
+        publish: "%{user_name} ha publicat el fòrum %{resource_name}"
+        unpublish: "%{user_name} ha despublicat el fòrum %{resource_name}"
+        update: "%{user_name} ha actualitzat el fòrum %{resource_name}"
+      participatory_process_step:
+        activate: "%{user_name} ha activat la fase %{resource_name} en el fòrum %{space_name}"
+        create: "%{user_name} ha creat la fase %{resource_name} en el fòrum %{space_name}"
+        delete: "%{user_name} ha eliminat la fase %{resource_name} en el fòrum %{space_name}"
+        update: "%{user_name} ha actualitzat la fase %{resource_name} en el fòrum %{space_name}"
+      participatory_process_user_role:
+        create: "%{user_name} ha convidat l'usuari %{resource_name} al fòrum %{space_name}"
+        delete: "%{user_name} ha eliminat l'usuari %{resource_name} del fòrum %{space_name}"
+        update: "%{user_name} ha canviat el rol de l'usuari %{resource_name} en el fòrum %{space_name}"
+    events:
+      participatory_process:
+        step_activated:
+          email_intro: 'La fase %{resource_title} ja està activa per %{participatory_space_title}. Pots veure-ho des d''aquesta pàgina:'
+          email_outro: Has rebut aquesta notificació perquè estàs seguint %{participatory_space_title}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+          email_subject: Una actualització a %{participatory_space_title}
+          notification_title: La fase %{resource_title} ja està activa per <a href="%{resource_path}">%{participatory_space_title}</a>
+        step_changed:
+          email_intro: 'S''han actualitzat les dates de la fase %{resource_title} a %{participatory_space_title}. Pots veure-ho des d''aquesta pàgina:'
+          email_outro: Has rebut aquesta notificació perquè estàs seguint %{participatory_space_title}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+          email_subject: Una actualització a %{participatory_space_title}
+          notification_title: Les dates de la fase <a href="%{resource_path}">%{resource_title}</a> a <a href="%{participatory_space_url}">%{participatory_space_title}</a> s'han actualitzat.
+    menu:
+      processes: Fòrums
+    pages:
+      home:
+        extended:
+          how_to_participate: Com participo en un fòrum?
+        statistics:
+          processes_count: Fòrums
+    participatory_process_groups:
+      show:
+        group_participatory_processes:
+          one: 1 fòrum per a %{group}
+          other: "%{count} fòrums per a %{group}"
+        title: Grups de fòrums
+    participatory_process_steps:
+      index:
+        process_steps: Fases del fòrum
+        title: Fases del fòrum
+    participatory_processes:
+      admin:
+        participatory_process_copies:
+          form:
+            slug_help: 'Els noms curts d''URL s''utilitzen per generar els URL que apunten a aquest fòrum. Només accepta lletres, números i guions, i ha de començar amb una lletra. Exemple: %{url}'
+        participatory_processes:
+          form:
+            announcement_help: El text que introdueixis aquí es mostrarà a l'usuari just a sota de la informació del fòrum.
+            slug_help: 'Els noms curts d''URL s''utilitzen per generar els URL que apunten a aquest fòrum. Només accepta lletres, números i guions, i ha de començar amb una lletra. Exemple: %{url}'
+      content_blocks:
+        highlighted_processes:
+          name: Fòrums destacats
+      index:
+        title: Fòrums
+      pages:
+        home:
+          highlighted_processes:
+            active_processes: Fòrums actius
+            active_step: Pas actiu
+            more_information: Més informació
+            participate: Participa
+            see_all_processes: Veure tots els fòrums
+      participatory_process_groups:
+        none: Cap
+      participatory_processes:
+        filters:
+          counters:
+            active:
+              one: 1 fòrum actiu
+              other: "%{count} fòrums actius"
+            all:
+              one: 1 fòrum
+              other: "%{count} fòrums"
+            past:
+              one: 1 fòrum passat
+              other: "%{count} fòrums passats"
+            upcoming:
+              one: 1 fòrum proper
+              other: "%{count} fòrums propers"
+          explanations:
+            no_active: Sense fòrums actius
+            no_active_nor_upcoming: No hi ha fòrums actius ni futurs
+            no_active_nor_upcoming_callout: No hi ha fòrums actius ni futurs. Aquí hi ha una llista dels anteriors.
+          names:
+            active: Actius
+            all: Tots
+            past: Passats
+            upcoming: Propers
+          see: Veure
+        index:
+          loading: Carregant resultats...
+      show:
+        developer_group: Grup promotor
+        end_date: Data de finalització
+        local_area: Àrea d'organització
+        participatory_scope: Què es decideix
+        participatory_structure: Com es decideix
+        private_space: Aquest és un fòrum privat
+        scope: Àmbit
+        start_date: Data d'inici
+        target: Qui participa
+        unspecified: Sense especificar
+      statistics:
+        answers_count: Respostes
+        comments_count: Comentaris
+        debates_count: Debats
+        endorsements_count: Adhesions
+        headline: Activitat
+        meetings_count: Trobades presencials
+        orders_count: Vots
+        pages_count: Pàgines
+        processes_count: Fòrums
+        projects_count: Projectes
+        proposals_count: propostes
+        results_count: Resultats
+        surveys_count: Enquestes
+        users_count: Participants
+        votes_count: Suports
+  devise:
+    mailer:
+      invite_private_user:
+        subject: Has estat convidat a un fòrum privat a %{organization}
+  layouts:
+    decidim:
+      participatory_process_groups:
+        participatory_process_group:
+          browse: Explorar
+          processes_count: 'Fòrums:'
+      participatory_process_widgets:
+        show:
+          active_step: Fase activa
+          take_part: Participa
+      participatory_processes:
+        index:
+          promoted_processes: Fòrums destacats
+        participatory_process:
+          active_step: 'Fase actual:'
+          take_part: Participa
+        promoted_process:
+          active_step: 'Fase actual:'
+          more_info: Més informació
+          take_part: Participa
+      process_header:
+        process_menu_item: El fòrum
+        unfold: Desplega
+      process_header_steps:
+        step: Fase %{current} de %{total}
+        view_steps: Veure les fases
