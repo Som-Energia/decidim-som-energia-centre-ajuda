@@ -13,7 +13,7 @@ gem "daemons"
 gem 'figaro', '>= 1.1.1'
 
 gem 'decidim', DECIDIM_VERSION
-gem 'decidim-verifications-cas_client', git: "git@gitlab.coditdev.net:decidim/decidim-verifications-cas_client.git", tag: "v0.0.2"
+gem 'decidim-cas_client', git: "git@gitlab.coditdev.net:decidim/decidim-cas-client.git", tag: "v0.0.15"
 gem "codit-devise-cas-authenticable", git: "git@gitlab.coditdev.net:decidim/codit-devise-cas-authenticable.git", tag: "v0.0.2"
 
 group :development, :test do

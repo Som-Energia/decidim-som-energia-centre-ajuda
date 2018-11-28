@@ -8,15 +8,13 @@ GIT
       rubycas-client (>= 2.2.1)
 
 GIT
-  remote: git@gitlab.coditdev.net:decidim/decidim-verifications-cas_client.git
-  revision: 9296f49538a6d8e03c28524b71493e216c0acb75
-  tag: v0.0.2
+  remote: git@gitlab.coditdev.net:decidim/decidim-cas-client.git
+  revision: fae0c87a70cff8300bfe6a089df8efcf2fc5a1d2
+  tag: v0.0.15
   specs:
-    decidim-verifications-cas_client (0.0.2)
-      cells-erb (~> 0.1.0)
-      cells-rails (~> 0.0.9)
-      decidim-core (~> 0.14.3)
-      decidim-verifications (~> 0.14.3)
+    decidim-cas_client (0.0.12)
+      decidim-core (~> 0.14.1)
+      decidim-verifications (~> 0.14.1)
 
 GEM
   remote: https://rubygems.org/
@@ -724,8 +722,8 @@ DEPENDENCIES
   codit-devise-cas-authenticable!
   daemons
   decidim (~> 0.14.3)
+  decidim-cas_client!
   decidim-dev (~> 0.14.3)
-  decidim-verifications-cas_client!
   delayed_job_active_record
   faker (~> 1.8.4)
   figaro (>= 1.1.1)
