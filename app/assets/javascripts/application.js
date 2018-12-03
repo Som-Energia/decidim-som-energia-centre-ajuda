@@ -13,3 +13,13 @@
 //= require rails-ujs
 //= require_tree .
 //= require decidim
+
+$(function(){
+  bindCasClientRoutes();
+});
+
+function bindCasClientRoutes(){
+  var locale = $(document.documentElement).attr("lang") || "es";
+  // For non-CAS users it still works
+  $("a[href*='/users/sign_out']").attr('href', '/users/cas/sign_out?locale='+locale);
+}
