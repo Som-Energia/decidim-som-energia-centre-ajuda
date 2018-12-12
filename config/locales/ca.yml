@@ -259,6 +259,8 @@ ca:
       home:
         extended:
           how_to_participate: Com participo en un fòrum?
+        footer_sub_hero:
+          footer_sub_hero_body: Benvinguts a l'espai virtual de la cooperativa obert a tothom, socis i no socis, on aclarir dubtes, compartir opinions, fer propostes i/o promoure canvis.
         statistics:
           processes_count: Fòrums
     participatory_process_groups:
@@ -288,7 +290,7 @@ ca:
       pages:
         home:
           highlighted_processes:
-            active_processes: Fòrums actius
+            promoted_processes: Fòrums destacats
             active_step: Pas actiu
             more_information: Més informació
             participate: Participa
