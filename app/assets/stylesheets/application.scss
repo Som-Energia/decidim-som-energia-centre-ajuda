@@ -14,3 +14,72 @@ $facebook: #3b5998 !default;
 $google: #dd4b39 !default;
 
 @import "decidim/application";
+
+
+// Custom styles
+
+.title-bar{
+background-color: #FFFFFF;
+color: #1a181d;
+}
+
+.topbar__dropmenu > ul > li > a, .topbar__user__login a{
+color: #706F6F;
+}
+
+.topbar__dropmenu > ul > li > a::after{
+border-top-color: #706F6F !important;
+}
+
+.main-footer__badge{
+width: 90px;
+}
+
+.mini-footer .decidim-logo{
+display: none;
+}
+
+.topbar__notifications .icon, .topbar__conversations .icon{
+fill: #706F6F;
+}
+
+.navbar {
+  background: #EBEBEB;
+  color: #706F6F;
+}
+
+.main-nav__link a {
+color: #706F6F;
+}
+
+.topbar__search input,
+.topbar__search input:focus {
+  color: #706F6F;
+}
+
+.topbar__search svg {
+  color: #706F6F;
+}
+
+.topbar__search input,
+  .topbar__search input:focus {
+    background: #EBEBEB;
+}
+
+.topbar__edit__link a {
+  color: #706F6F;
+}
+
+.main-footer {
+    background-color: #3E3E3D;
+}
+
+.mini-footer {
+  padding: 1rem 0;
+  background-color: #0A0A0A;
+}
+
+.main-footer a,
+.mini-footer a {
+  color: #F2F2F1;
+}
