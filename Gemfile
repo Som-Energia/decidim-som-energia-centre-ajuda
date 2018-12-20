@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "~> 0.14.3"
+DECIDIM_VERSION = "~> 0.14.4"
 
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
