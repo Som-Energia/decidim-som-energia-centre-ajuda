@@ -259,6 +259,8 @@ gl:
       home:
         extended:
           how_to_participate: '¿Como participo nun forum?'
+        footer_sub_hero:
+          footer_sub_hero_body: Benvido ao espazo virtual da cooperativa aberta a todos, socios e non membros, onde resolver dúbidas, compartir opinións, facer propostas e / ou promover cambios.
         statistics:
           processes_count: Forum
     participatory_process_groups:
