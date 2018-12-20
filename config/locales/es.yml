@@ -259,6 +259,8 @@ es:
       home:
         extended:
           how_to_participate: '¿Cómo tomo parte en un foro?'
+        footer_sub_hero:
+          footer_sub_hero_body: Bienvenidos al espacio virtual de la cooperativa abierto a todo el mundo, socios y no socios, donde resolver dudas, compartir opiniones, hacer propuestas y/o promover cambios.
         statistics:
           processes_count: Foros
     participatory_process_groups:
@@ -288,7 +290,7 @@ es:
       pages:
         home:
           highlighted_processes:
-            active_processes: Foros activos
+            promoted_processes: Foros destacados
             active_step: Paso activo
             more_information: Más información
             participate: Participar

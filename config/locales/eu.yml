@@ -259,6 +259,8 @@ eu:
       home:
         extended:
           how_to_participate: Nola har dezaket parte foroak batean?
+        footer_sub_hero:
+          footer_sub_hero_body: Ongi etorri guztiontzat, bazkide eta kide ez diren kooperatibetako espazio birtuala, zalantzak argitzeko, iritziak partekatzeko, proposamenak egiteko edota aldaketa sustatzeko.
         statistics:
           processes_count: Forum
     participatory_process_groups:
