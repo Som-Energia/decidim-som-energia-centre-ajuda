@@ -4,6 +4,7 @@ ruby RUBY_VERSION
 
 DECIDIM_VERSION = "~> 0.14.4"
 
+gem 'rails', '5.2.1'
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'faker', "~> 1.8.4"
