@@ -290,6 +290,8 @@ eu:
       pages:
         home:
           highlighted_processes:
+            active_processes: Fòrums actius
+            promoted_processes: Forum aipagarriak
             active_processes: Forum aktiboak
             active_step: Urratsa aktiboa
             more_information: Informazio gehiago

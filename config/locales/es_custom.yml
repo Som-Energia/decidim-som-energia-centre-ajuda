@@ -1,0 +1,61 @@
+---
+es:
+  decidim:
+    authorization_handlers:
+      cas_client:
+        explanation: Explicación verificación Cas Client
+        name: Verificación Cas Client
+    features:
+      cas_client:
+        name: Cas Client
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            cas_client: Verifícate mediante Cas Client
+      cas_client:
+        admin:
+          actions:
+            reverify_all: Volver a verificar todas
+            confirm_reverify_all: ¿Estás seguro de querer verificar todas las autorizaciones de nuevo?
+          verified_authorizations:
+            index:
+              title: Verificaciones almacenadas
+              total: Total
+              count:
+                one: "1 verificación"
+                other: "%{count} verificaciones"
+                zero: "Sin verificacions"
+            reverify_all:
+              process_completed: "Proceso de reverificación completado"
+        authorizations:
+          create:
+            error: Ha surgido un problema generando la petición
+            success: Verificación con Cas Client completada correctamente
+          form:
+            send: Pida verificación<% if %><% if %>
+            sending: Pidiendo
+            title: Verificar con Cas Client
+          new:
+            back: Atrás
+            do_login: Do login
+            title: Verificar con Cas Client
+        revoked_mailer:
+          revoked:
+            body: Si desea volver a realizar la verificación, haga clic <a href="%{resource_path}">aquí</a>.
+            intro: Su verificación con Cas Client ha sido revocada
+            subject: Su verificación con Cas Client ha sido revocada
+    profiles:
+      partner: Socio
+  errors:
+    messages:
+      cas_client:
+        already_confirmed: Ja había sido confirmado
+        cannot_validate: Cas Client no puede validar sus datos
+        connection_failed: "No es posible conectar con Cas Client. Por favor, inténtelo mas tarde."
+        connection_timeout: "Cas Client no está respondiendo a la verificación. Por favor, inténtelo mas tarde."
+        duplicated: Estos datos ya han sido usados
+        not_correspond: Estos datos no corresponded con la verificación anterior
+        not_exist: No existe una verificación previa
+        not_valid_dni_or_nie: El formato del DNI/NIE no es válido. Debe ir sin guiones "-". Todas las letras deben ser mayúsculas, solo contener letras y números, y empezar por un número o las letras X, Y o Z.
+        not_valid: Sus datos no corresponden con el padrón.

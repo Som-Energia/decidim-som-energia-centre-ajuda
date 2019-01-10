@@ -290,6 +290,7 @@ es:
       pages:
         home:
           highlighted_processes:
+            active_processes: Foros activos
             promoted_processes: Foros destacados
             active_step: Paso activo
             more_information: Más información
