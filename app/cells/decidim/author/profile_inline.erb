@@ -19,6 +19,10 @@
     <%= external_icon "partner.svg" %>
   <% end %>
 
+  <% if model.admin? %>
+    <%= external_icon "admin.svg" %>
+  <% end %>
+
   <% if model.nickname.present? %>
     <span class="author__nickname"><%= model.nickname %></span>
   <% end %>

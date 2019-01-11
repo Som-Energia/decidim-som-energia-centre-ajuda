@@ -10,7 +10,7 @@
         </span>
       <% end %>
     </h5>
-    <p><%#= profile_user.about %></p>
+    <p><%= profile_user.about %></p>
     <% if profile_user.personal_url.present? %>
       <%= link_to html_truncate(profile_user.personal_url.gsub(%r{https?\:\/\/}, ""), length: 30), profile_user.personal_url %>
     <% end %>
@@ -31,6 +31,14 @@
         <%= external_icon "partner.svg", class: "author__verified" %>
       </span>
       <span> <%= t("decidim.profiles.partner")%> </span>
+    </div>
+  <% end %>
+  <% if profile_user.admin? %>
+    <div class="badge-card__content">
+      <span>
+        <%= external_icon "admin.svg", class: "author__verified" %>
+      </span>
+      <span> <%= t("decidim.profiles.admin")%> </span>
     </div>
   <% end %>
   <%= render_hook(:user_profile_bottom) %>

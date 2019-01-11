@@ -12,6 +12,9 @@
             <% if model.cas_user? %>
               <%= external_icon "partner.svg", class: "author__verified" %>
             <% end %>
+            <% if model.admin? %>
+              <%= external_icon "admin.svg", class: "author__verified" %>
+            <% end %>
           </div>
           <%= link_to nickname, resource_path, class: "author__nickname" %>
         </div>

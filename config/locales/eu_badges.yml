@@ -2,4 +2,5 @@
 eu:
   decidim:
     profiles:
+      admin: Administradoreak
       partner: Bazkide

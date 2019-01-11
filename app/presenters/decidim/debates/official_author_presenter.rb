@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 module Decidim
-  module Proposals
+  module Debates
     #
-    # A dummy presenter to abstract out the author of an official proposal.
+    # A dummy presenter to abstract out the author of an official debate.
     #
     class OfficialAuthorPresenter
       def name
-        I18n.t("decidim.proposals.models.proposal.fields.official_proposal")
+        I18n.t("decidim.debates.models.debate.fields.official_debate")
       end
 
       def nickname
@@ -29,7 +29,7 @@ module Decidim
       def deleted?
         false
       end
-
+      
       def cas_user?
         false
       end

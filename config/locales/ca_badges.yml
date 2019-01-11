@@ -2,4 +2,5 @@
 ca:
   decidim:
     profiles:
+      admin: Administrador
       partner: Soci
