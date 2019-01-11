@@ -1,0 +1,6 @@
+---
+es:
+  decidim:
+    profiles:
+      admin: Administrador
+      partner: Socio

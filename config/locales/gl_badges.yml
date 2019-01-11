@@ -1,0 +1,6 @@
+---
+gl:
+  decidim:
+    profiles:
+      admin: Administrador
+      partner: Compañeiro

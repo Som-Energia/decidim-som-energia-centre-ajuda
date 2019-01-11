@@ -291,6 +291,7 @@ gl:
         home:
           highlighted_processes:
             active_processes: Foros activos
+            promoted_processes: Foros Destacado
             active_step: Paso activo
             more_information: Máis información
             participate: Participar
