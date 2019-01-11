@@ -24,3 +24,25 @@ user.save!
 6. Fill the rest of the form and submit it.
 
 You're good to go!
+
+
+## Thinks to keep in mind for future upgrades.
+
+Forum SomEnergia has some customizations.
+One of this customizations, add badges to users and needs a dependency with gem `decidim-cas_client`.
+
+- If user is verified with CAS CLIENT it has one badge.
+- If user is an admin, it has a different badge.  
+
+Take into account that this customizations are overwritting some decidim files.
+These are the files overwritted:
+
+- Cells:
+  - `app/cells/decidim/author/profile_inline.erb`
+  - `app/cells/decidim/profile_sidebar/show.erb`
+  - `app/cells/decidim/user_profile/header.erb`
+
+- Presentes:
+  - `app/presenters/decidim/debates/official_author_presenter.rb`
+  - `app/presenters/decidim/proposals/official_author_presenter.rb`
+  - `app/presenters/decidim/user_group_presenter.rb`  
