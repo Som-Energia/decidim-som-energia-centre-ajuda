@@ -4,7 +4,7 @@ ruby RUBY_VERSION
 
 DECIDIM_VERSION = "~> 0.16.0"
 
-gem 'rails', '5.2.1'
+gem 'rails', '5.2.2.1'
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'delayed_job_active_record'
