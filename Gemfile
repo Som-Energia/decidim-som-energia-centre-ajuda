@@ -2,13 +2,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "~> 0.16.0"
-
-# Force gem rails to 5.2.2.1 to fix some vulnerabilities
-# on actionview and railties
-# It can be removed when new stable version will be released or
-# when Decidim force the rails version
-gem 'rails', '5.2.2.1'
+DECIDIM_VERSION = "~> 0.17.0"
 
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
@@ -19,7 +13,7 @@ gem "whenever"
 gem 'figaro', '>= 1.1.1'
 
 gem 'decidim', DECIDIM_VERSION
-gem 'decidim-cas_client', git: "git@gitlab.coditdev.net:decidim/decidim-cas-client.git", tag: "v0.0.18"
+gem 'decidim-cas_client', git: "git@gitlab.coditdev.net:decidim/decidim-cas-client.git", tag: "v0.0.19"
 gem "codit-devise-cas-authenticable", git: "git@gitlab.coditdev.net:decidim/codit-devise-cas-authenticable.git", tag: "v0.0.4"
 
 group :development, :test do
