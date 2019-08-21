@@ -16,6 +16,11 @@ gem 'decidim', DECIDIM_VERSION
 gem 'decidim-cas_client', git: "git@gitlab.coditdev.net:decidim/decidim-cas-client.git", tag: "v0.0.19"
 gem "codit-devise-cas-authenticable", git: "git@gitlab.coditdev.net:decidim/codit-devise-cas-authenticable.git", tag: "v0.0.4"
 
+# Force gem version to fix:
+# undefined method `polymorphic?' for ActiveRecord::Reflection::PolymorphicReflection
+# See: https://github.com/activerecord-hackery/ransack/issues/1039
+gem 'ransack', '2.1.1'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem "better_errors"
