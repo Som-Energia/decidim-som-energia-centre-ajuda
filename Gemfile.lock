@@ -1,18 +1,16 @@
 GIT
-  remote: git@gitlab.coditdev.net:decidim/codit-devise-cas-authenticable.git
-  revision: 4ebbf848e9ae99316525eb3c555bda9eb1d54d07
-  tag: v0.0.4
+  remote: git@github.com:CodiTramuntana/codit-devise-cas-authenticable.git
+  revision: 27f87ab349d397224185cae5232dcb30d523d025
   specs:
-    codit-devise-cas-authenticable (0.0.4)
+    codit-devise-cas-authenticable (0.0.6)
       devise (>= 1.2.0)
       rubycas-client (>= 2.2.1)
 
 GIT
-  remote: git@gitlab.coditdev.net:decidim/decidim-cas-client.git
-  revision: f6fb23eff27b6b34abe9dc14db59bdfd17f48fbe
-  tag: v0.0.19
+  remote: git@github.com:CodiTramuntana/decidim-cas-client.git
+  revision: fe6b1c0b3c96e4e74472d8b67f9f88a1c16bf4c3
   specs:
-    decidim-cas_client (0.0.19)
+    decidim-cas_client (0.0.20)
       decidim-core (>= 0.16.0)
       decidim-verifications (>= 0.16.0)
 
@@ -783,6 +781,7 @@ DEPENDENCIES
   delayed_job_active_record
   faker (~> 1.8.4)
   figaro (>= 1.1.1)
+  geocoder (~> 1.5.2)
   letter_opener_web (~> 1.3.0)
   listen (~> 3.1.0)
   puma (~> 3.0)
