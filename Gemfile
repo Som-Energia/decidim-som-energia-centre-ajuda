@@ -11,7 +11,7 @@ gem "daemons"
 gem "whenever"
 
 gem 'figaro', '>= 1.1.1'
-gem 'geocoder', '~> 1.5.2'
+gem 'geocoder', '~> 1.6.1'
 
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-cas_client', git: "git@github.com:CodiTramuntana/decidim-cas-client.git"
