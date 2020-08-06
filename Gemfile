@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: '0.18-stable' }
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: '0.19-stable' }
 
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
@@ -11,10 +11,11 @@ gem "daemons"
 gem "whenever"
 
 gem 'figaro', '>= 1.1.1'
+gem 'geocoder', '~> 1.5.2'
 
 gem 'decidim', DECIDIM_VERSION
-gem 'decidim-cas_client', git: "git@gitlab.coditdev.net:decidim/decidim-cas-client.git", tag: "v0.0.19"
-gem "codit-devise-cas-authenticable", git: "git@gitlab.coditdev.net:decidim/codit-devise-cas-authenticable.git", tag: "v0.0.4"
+gem 'decidim-cas_client', git: "git@github.com:CodiTramuntana/decidim-cas-client.git"
+gem "codit-devise-cas-authenticable", git: "git@github.com:CodiTramuntana/codit-devise-cas-authenticable.git"
 
 # Force gem version to fix:
 # undefined method `polymorphic?' for ActiveRecord::Reflection::PolymorphicReflection
